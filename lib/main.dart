@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -29,9 +31,8 @@ void main() async {
   await Firebase.initializeApp();
   FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(true);
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
-
-  runApp(
-      MultiProvider(
+  runZonedGuarded(() {
+    runApp(MultiProvider(
         providers: [
           ChangeNotifierProvider(
             create: (context) => PlatoonOneNotifier(),
@@ -84,7 +85,8 @@ void main() async {
 
         ],
         child: MyApp(),
-      )
+      ));
+    }, FirebaseCrashlytics.instance.recordError
   );
 }
 

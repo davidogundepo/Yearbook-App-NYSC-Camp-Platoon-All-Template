@@ -31,7 +31,6 @@ class PlatoonEight {
   String whatsNext;
   String whereYouLive;
   String worstMoment;
-  String nyscBatch;
   String occupation;
   String favPlaceInCamp;
   String favCampActivity;
@@ -73,7 +72,7 @@ class PlatoonEight {
     occupation = data['occupation'];
     favPlaceInCamp = data['fav_place_in_camp'];
     favCampActivity = data['fav_activity_in_camp'];
-    matchPastInCamp = data['match_past_in_camp'];
+    matchPastInCamp = data['match_past'];
   }
 
 }

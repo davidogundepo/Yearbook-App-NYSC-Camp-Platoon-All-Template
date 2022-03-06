@@ -27,8 +27,8 @@ String cvStatement4 = "4. We create a social atmosphere for corpers and we belie
 String whyCampGroup = "WHY $campName?".toUpperCase();
 String whyCampGroupStatement = "$campName was established on the 3rd of October 1974 out of the vision and passion of President David Oludepo to empower today’s youth for tomorrows challenges.\n\nWe offer students (both domestic and international) the opportunity to earn an unparalleled high-quality educational experience. With passionate and  qualified teaching staff, a clean and caring school atmosphere, and the resources to supply students with the skills necessary for their continued personal success, our school looks to help students to realize their potential.";
 String campBody = "Nonwa Gbam Tai NYSC Orientation Camp Body\n\n";
-String campCorpersBodyStatement = "We currently have 54 corp members in $campName, 31 male corpers and 22 female corpers. 13 corp members have graduated from $campName.";
-String campStaffBodyStatement = "We currently have 54 staff members in $campName, 31 male staff and 22 female staff.";
+String campCorpersBodyStatement = "We currently have 53 corp members in $campName, 31 male corpers and 22 female corpers. 13 corp members have graduated from $campName.";
+String campStaffBodyStatement = "We currently have 42 staff members in $campName, 19 male staff and 23 female staff.";
 String campCorpersPopulationChart = "$campName Corp Members Population Chart";
 String campStaffPopulationChart = "$campName Staff Members Population Chart";
 
@@ -37,6 +37,8 @@ String nyscCampArialSwipe = "Swipe left or right for more photos";
 
 double maleCampCorperPopulation = 31;
 double femaleCampCorperPopulation = 22;
+
+double campStaffPopulation = 42;
 
 
 Color backgroundColor = Colors.blueGrey[900];
@@ -55,6 +57,9 @@ Color chartBackgroundColor = Colors.blueGrey[200];
 Color chartTextColor = Colors.blueGrey[900].withOpacity(0.9);
 Color firstCampCorperChartColor = Color.fromRGBO(145, 172, 179, 1).withAlpha(160);
 Color secondCampCorperChartColor = Color.fromRGBO(184, 186, 181, 1);
+Color firstCampBodyChartColor = Color.fromRGBO(145, 172, 179, 1).withAlpha(160);
+Color secondCampBodyChartColor = Color.fromRGBO(184, 186, 181, 1);
+Color thirdCampBodyChartColor = Color.fromRGBO(44, 99, 117, 1.0);
 
 class AboutCamp extends StatefulWidget {
 
@@ -77,8 +82,12 @@ class _AboutCamp extends State<AboutCamp> {
     CampArialNotifier campArialNotifier = Provider.of<CampArialNotifier>(context, listen: false);
     getCampArial(campArialNotifier);
 
-    CampCorperMap.putIfAbsent("Male Corp Members", () => 31);
-    CampCorperMap.putIfAbsent("Female Corp Members", () => 22);
+    campBodyMap.putIfAbsent("Male Corp Members", () => 31);
+    campBodyMap.putIfAbsent("Female Corp Members", () => 22);
+    campBodyMap.putIfAbsent("Camp Staff Members", () => 42);
+
+    campCorperMap.putIfAbsent("Male Corp Members", () => 31);
+    campCorperMap.putIfAbsent("Female Corp Members", () => 22);
 
     super.initState();
   }
@@ -395,7 +404,7 @@ class _AboutCamp extends State<AboutCamp> {
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, bottom: 30),
               child: Container(
-                height: 250,
+                height: 350,
                 decoration: BoxDecoration(
                     color: containerColor,
                     borderRadius: new BorderRadius.circular(10)
@@ -422,27 +431,34 @@ class _AboutCamp extends State<AboutCamp> {
                                 )),
                           ),
                           PieChart(
-                            legendStyle: TextStyle(
-                              color: materialTextColor,
-                            ),
-                            dataMap: CampCorperMap,
-                            animationDuration: Duration(seconds: 10),
-                            chartLegendSpacing: 42.0,
+                            dataMap: campCorperMap,
+                            animationDuration: Duration(milliseconds: 10),
+                            chartLegendSpacing: 22,
                             chartRadius: MediaQuery.of(context).size.width / 2.7,
-                            showChartValuesInPercentage: false,
-                            showChartValues: true,
-                            showChartValuesOutside: false,
-                            chartValueBackgroundColor: chartBackgroundColor,
-                            colorList: CampCorperColorList,
-                            showLegends: true,
-                            legendPosition: LegendPosition.right,
-                            decimalPlaces: 0,
-                            showChartValueLabel: true,
-                            initialAngle: 0,
-                            chartValueStyle: defaultChartValueStyle.copyWith(
-                              color: chartTextColor,
+                            colorList: campCorperColorList,
+                            initialAngleInDegree: 0,
+                            chartType: ChartType.ring,
+                            legendOptions: LegendOptions(
+                              showLegendsInRow: false,
+                              legendPosition: LegendPosition.bottom,
+                              showLegends: true,
+                              legendShape: BoxShape.circle,
+                              legendTextStyle: TextStyle(
+                                color: materialTextColor,
+                              ),
                             ),
-                            chartType: ChartType.disc,
+                            chartValuesOptions: ChartValuesOptions(
+                              showChartValueBackground: true,
+                              showChartValues: true,
+                              // showChartValueLabel: true,
+                              chartValueStyle: defaultChartValueStyle.copyWith(
+                                color: chartTextColor
+                              ),
+                              showChartValuesInPercentage: false,
+                              showChartValuesOutside: false,
+                              decimalPlaces: 0,
+                              chartValueBackgroundColor: chartBackgroundColor,
+                            ),
                           ),
                         ],
                       ),
@@ -498,7 +514,7 @@ class _AboutCamp extends State<AboutCamp> {
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, bottom: 30),
               child: Container(
-                height: 250,
+                height: 370,
                 decoration: BoxDecoration(
                     color: containerColor,
                     borderRadius: new BorderRadius.circular(10)
@@ -525,27 +541,34 @@ class _AboutCamp extends State<AboutCamp> {
                                 )),
                           ),
                           PieChart(
-                            legendStyle: TextStyle(
-                              color: materialTextColor,
-                            ),
-                            dataMap: CampCorperMap,
-                            animationDuration: Duration(seconds: 10),
-                            chartLegendSpacing: 42.0,
+                            dataMap: campBodyMap,
+                            animationDuration: Duration(milliseconds: 8000),
+                            chartLegendSpacing: 22,
                             chartRadius: MediaQuery.of(context).size.width / 2.7,
-                            showChartValuesInPercentage: false,
-                            showChartValues: true,
-                            showChartValuesOutside: false,
-                            chartValueBackgroundColor: chartBackgroundColor,
-                            colorList: CampCorperColorList,
-                            showLegends: true,
-                            legendPosition: LegendPosition.right,
-                            decimalPlaces: 0,
-                            showChartValueLabel: true,
-                            initialAngle: 0,
-                            chartValueStyle: defaultChartValueStyle.copyWith(
-                              color: chartTextColor,
-                            ),
+                            colorList: campBodyColorList,
+                            initialAngleInDegree: 0,
                             chartType: ChartType.disc,
+                            legendOptions: LegendOptions(
+                              showLegendsInRow: false,
+                              legendPosition: LegendPosition.bottom,
+                              showLegends: true,
+                              legendShape: BoxShape.circle,
+                              legendTextStyle: TextStyle(
+                                color: materialTextColor,
+                              ),
+                            ),
+                            chartValuesOptions: ChartValuesOptions(
+                              showChartValueBackground: true,
+                              showChartValues: true,
+                              // showChartValueLabel: true,
+                              chartValueStyle: defaultChartValueStyle.copyWith(
+                                color: chartTextColor
+                              ),
+                              showChartValuesInPercentage: false,
+                              showChartValuesOutside: false,
+                              decimalPlaces: 0,
+                              chartValueBackgroundColor: chartBackgroundColor,
+                            ),
                           ),
                         ],
                       ),
@@ -645,6 +668,7 @@ class _AboutCamp extends State<AboutCamp> {
                   );
                 },
                 itemWidth: 350,
+                layout: SwiperLayout.STACK,
               ),
 
             ),
@@ -664,21 +688,43 @@ class CampCorperPopulation{
 }
 
 dynamic getCampCorperPopulationData(){
-  List<CampCorperPopulation> CampCorperPopulationData = <CampCorperPopulation>[
+  List<CampCorperPopulation> campCorperPopulationData = <CampCorperPopulation>[
     CampCorperPopulation('Male', maleCampCorperPopulation),
     CampCorperPopulation('Female', femaleCampCorperPopulation),
   ];
-  return CampCorperPopulationData;
+  return campCorperPopulationData;
+}
+
+
+class CampBodyPopulation{
+  String x;
+  double y;
+  CampBodyPopulation(this.x,this.y);
+}
+
+dynamic getCampBodyPopulationData(){
+  List<CampBodyPopulation> campBodyPopulationData = <CampBodyPopulation>[
+    CampBodyPopulation('Male', maleCampCorperPopulation),
+    CampBodyPopulation('Female', femaleCampCorperPopulation),
+    CampBodyPopulation('Staff', campStaffPopulation),
+  ];
+  return campBodyPopulationData;
 }
 
 
 
 bool toggle = false;
 
-Map<String, double> CampCorperMap = Map();
+Map<String, double> campBodyMap = Map();
+Map<String, double> campCorperMap = Map();
 
-List<Color> CampCorperColorList = [
+List<Color> campCorperColorList = [
   firstCampCorperChartColor,
   secondCampCorperChartColor,
 ];
 
+List<Color> campBodyColorList = [
+  firstCampBodyChartColor,
+  secondCampBodyChartColor,
+  thirdCampBodyChartColor,
+];

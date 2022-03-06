@@ -32,7 +32,7 @@ String cvStatement5 = "4. Team Work\n\n";
 String whyNYSC = "WHY $nyscName?".toUpperCase();
 String whyNYSCStatement = "$nyscName scheme was created in a bid to reconstruct, reconcile and rebuild the country after the Nigerian Civil war. The unfortunate antecedents in our national history gave impetus to the establishment of the National Youth Service Corps by decree No.24 of 22nd May 1973 which stated that the NYSC is being established with a view to the proper encouragement and development of common ties among the youths of Nigeria and the promotion of national unity.";
 String staffBody = "$nyscName Staff Body all over Nigeria\n\n";
-String staffBodyStatement = "We have 4,054 NYSC Staff all over the states of Nigeria.";
+String staffBodyStatement = "We have 4,054 NYSC Staff all over the states of Nigeria, 2104 male staff and 1950 female staff";
 String populationChart = "$nyscName 2020/2021 Population Chart";
 String corperBody = "Corp Members all over Nigeria\n\n";
 String corperBodyStatement = "We currently have 314,064 corp members serving in $nyscName all over Nigeria, 2020/2021 session through Batch A till Batch C.\n186,541 male corp members and 127,523 female corp members.\n9,377,910 corp members have graduated from $nyscName, since the inception, 22nd May 1973.";
@@ -117,7 +117,7 @@ Color containerColor = Colors.blueGrey.withAlpha(50);
 Color containerTextColor = Colors.white.withAlpha(110);
 Color containerColor2 = Colors.blueGrey;
 Color chartBackgroundColor = Colors.grey[200];
-Color chartTextColor = Colors.white;
+Color chartTextColor = Color.fromRGBO(25, 49, 111, 1);
 Color chartTextColorTwo = Color.fromRGBO(25, 49, 111, 1);
 Color firstFederalNYSCChartColor = Colors.white.withAlpha(110);
 Color secondFederalNYSCChartColor = Color.fromRGBO(25, 49, 111, 1);
@@ -480,7 +480,7 @@ class _AboutNYSCFederalState extends State<AboutNYSCFederalState> {
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, bottom: 30),
               child: Container(
-                height: 250,
+                height: 350,
                 decoration: BoxDecoration(
                     color: containerColor,
                     borderRadius: new BorderRadius.circular(10)
@@ -507,27 +507,34 @@ class _AboutNYSCFederalState extends State<AboutNYSCFederalState> {
                                 )),
                           ),
                           PieChart(
-                            legendStyle: TextStyle(
-                              color: containerTextColor,
-                            ),
                             dataMap: federalNYSCMap,
-                            animationDuration: Duration(seconds: 10),
-                            chartLegendSpacing: 42.0,
+                            animationDuration: Duration(milliseconds: 8000),
+                            chartLegendSpacing: 22,
                             chartRadius: MediaQuery.of(context).size.width / 2.7,
-                            showChartValuesInPercentage: false,
-                            showChartValues: true,
-                            showChartValuesOutside: false,
-                            chartValueBackgroundColor: containerTextColor,
                             colorList: federalNYSCColorList,
-                            showLegends: true,
-                            legendPosition: LegendPosition.right,
-                            decimalPlaces: 0,
-                            showChartValueLabel: true,
-                            initialAngle: 0,
-                            chartValueStyle: defaultChartValueStyle.copyWith(
-                              color: chartTextColor,
-                            ),
+                            initialAngleInDegree: 0,
                             chartType: ChartType.disc,
+                            legendOptions: LegendOptions(
+                              showLegendsInRow: false,
+                              legendPosition: LegendPosition.bottom,
+                              showLegends: true,
+                              legendShape: BoxShape.circle,
+                              legendTextStyle: TextStyle(
+                                color: containerTextColor,
+                              ),
+                            ),
+                            chartValuesOptions: ChartValuesOptions(
+                              showChartValueBackground: true,
+                              showChartValues: true,
+                              // showChartValueLabel: true,
+                              chartValueStyle: defaultChartValueStyle.copyWith(
+                                color: chartTextColor
+                              ),
+                              showChartValuesInPercentage: false,
+                              showChartValuesOutside: false,
+                              decimalPlaces: 0,
+                              chartValueBackgroundColor: chartBackgroundColor,
+                            ),
                           ),
                         ],
                       ),
@@ -584,7 +591,7 @@ class _AboutNYSCFederalState extends State<AboutNYSCFederalState> {
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, bottom: 30),
               child: Container(
-                height: 270,
+                height: 350,
                 decoration: BoxDecoration(
                     color: containerColor,
                     borderRadius: new BorderRadius.circular(10)
@@ -611,27 +618,34 @@ class _AboutNYSCFederalState extends State<AboutNYSCFederalState> {
                                 )),
                           ),
                           PieChart(
-                            legendStyle: TextStyle(
-                              color: containerTextColor,
-                            ),
                             dataMap: federalNYSCCorpMemberMap,
-                            animationDuration: Duration(seconds: 10),
-                            chartLegendSpacing: 42.0,
+                            animationDuration: Duration(milliseconds: 8000),
+                            chartLegendSpacing: 22,
                             chartRadius: MediaQuery.of(context).size.width / 2.7,
-                            showChartValuesInPercentage: false,
-                            showChartValues: true,
-                            showChartValuesOutside: false,
-                            chartValueBackgroundColor: chartBackgroundColor,
                             colorList: federalNYSCCorpMemberColorList,
-                            showLegends: true,
-                            legendPosition: LegendPosition.right,
-                            decimalPlaces: 0,
-                            showChartValueLabel: true,
-                            initialAngle: 0,
-                            chartValueStyle: defaultChartValueStyle.copyWith(
-                              color: chartTextColorTwo.withAlpha(160),
-                            ),
+                            initialAngleInDegree: 0,
                             chartType: ChartType.ring,
+                            legendOptions: LegendOptions(
+                              showLegendsInRow: false,
+                              legendPosition: LegendPosition.bottom,
+                              showLegends: true,
+                              legendShape: BoxShape.circle,
+                              legendTextStyle: TextStyle(
+                                color: containerTextColor,
+                              ),
+                            ),
+                            chartValuesOptions: ChartValuesOptions(
+                              showChartValueBackground: true,
+                              showChartValues: true,
+                              // showChartValueLabel: true,
+                              chartValueStyle: defaultChartValueStyle.copyWith(
+                                color: chartTextColorTwo.withAlpha(160),
+                              ),
+                              showChartValuesInPercentage: false,
+                              showChartValuesOutside: false,
+                              decimalPlaces: 0,
+                              chartValueBackgroundColor: chartBackgroundColor,
+                            ),
                           ),
                         ],
                       ),

@@ -118,7 +118,8 @@ class _CampOfficialsDetailsPageState extends State<CampOfficialsDetailsPage> {
     if (await canLaunch(url)) {
       await launch(url);
     } else {
-      print("Can't Launch $url");
+      ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: new Text("The required App not installed")));
     }
   }
 
@@ -577,7 +578,7 @@ class _CampOfficialsDetailsPageState extends State<CampOfficialsDetailsPage> {
                       elevation: 2,
                       color: buttonColor,
                       icon: new Icon(
-                        MdiIcons.twitterCircle,
+                        MdiIcons.twitter,
                         color: iconTextColor,
                       ),
                       label: Text(twitterButton,
@@ -610,7 +611,7 @@ class _CampOfficialsDetailsPageState extends State<CampOfficialsDetailsPage> {
                         elevation: 2,
                         color: buttonColor,
                         icon: new Icon(
-                          MdiIcons.twitterCircle,
+                          MdiIcons.twitter,
                           color: iconTextColor,
                         ),
                         label: Text(twitterButton,

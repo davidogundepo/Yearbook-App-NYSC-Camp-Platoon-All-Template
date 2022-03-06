@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>398224111517-4t6jrcpsne8bsddqmvoi7324b11qv8i5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.398224111517-4t6jrcpsne8bsddqmvoi7324b11qv8i5</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>398224111517-8rlqtg302splecuh661k4mkb3iquldcf.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCgez02eVTkTTtxoKPAJNthB2saJndUD-I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>398224111517</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.nyscCampPlatoonsAll</string>
+	<key>PROJECT_ID</key>
+	<string>nysc-camp-template</string>
+	<key>STORAGE_BUCKET</key>
+	<string>nysc-camp-template.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:398224111517:ios:a4ff8b3063c7ff8d052174</string>
+	<key>DATABASE_URL</key>
+	<string>https://nysc-camp-template.firebaseio.com</string>
+</dict>
+</plist>

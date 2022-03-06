@@ -335,7 +335,8 @@ class _MyPlatoonFourPageState extends State<MyPlatoonFourPage> {
                                                 color: textColor
                                             ),),
                                           onTap: () {
-                                            navigateToAboutCamp(context);
+                                          Navigator.of(context).pop(false);
+                                          navigateToAboutCamp(context);
                                           },
                                         ),
                                         ListTile(
@@ -345,7 +346,8 @@ class _MyPlatoonFourPageState extends State<MyPlatoonFourPage> {
                                                 color: textColor
                                             ),),
                                           onTap: () {
-                                            navigateToAboutNYSCFederalState(context);
+                                          Navigator.of(context).pop(false);
+                                          navigateToAboutNYSCFederalState(context);
                                           },
                                         ),
                                         ListTile(
@@ -365,7 +367,8 @@ class _MyPlatoonFourPageState extends State<MyPlatoonFourPage> {
                                                 color: textColor
                                             ),),
                                           onTap: () {
-                                            navigateToAboutAppDetailsPage(context);
+                                          Navigator.of(context).pop(false);
+                                          navigateToAboutAppDetailsPage(context);
                                           },
                                         ),
 
@@ -400,7 +403,7 @@ class _MyPlatoonFourPageState extends State<MyPlatoonFourPage> {
                       heightFactor: 0.6,
                       child: Text(
                           thrownName,
-                          style: GoogleFonts.amaticSC(
+                          style: GoogleFonts.abel(
                               color: appBarTextColor,
                               fontSize: 26.0,
                               fontWeight: FontWeight.bold

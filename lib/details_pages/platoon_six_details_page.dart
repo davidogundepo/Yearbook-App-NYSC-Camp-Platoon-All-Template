@@ -21,8 +21,8 @@ String urlTwitter = "https://twitter.com/";
 String urlFacebook = "https://facebook.com/";
 String urlInstagram = "https://www.instagram.com/";
 String urlTelegram = "https://www.telegram.org/";
-String urlSnapchat = "https://www.snapchat.com/";
-String urlTikTok = "https://www.tiktok.com/";
+String urlSnapchat = "https://www.snapchat.com/add/";
+String urlTikTok = "https://www.tiktok.com/@";
 String urlLinkedIn = "https://www.linkedin.com/";
 
 
@@ -60,7 +60,6 @@ String whatsNextAfterTitle = "What's next after NYSC\n";
 String currentResidenceStateTitle = "State of Residence\n";
 String stateOfOriginTitle = "State of Origin\n";
 String dobTitle = "Date of Birth\n";
-String nyscBatchTitle = "NYSC Batch\n";
 String occupationTitle = "What's your side Occupation\n";
 String hobbiesTitle = "Hobbies\n";
 String philosophyTitle = "Philosophy about Life\n";
@@ -145,7 +144,6 @@ var _telegram;
 var _whatsNext;
 var _stateLiving;
 var _worstMoment;
-var _nyscBatch;
 var _occupation;
 var _favPlaceInCamp;
 var _favCampActivity;
@@ -173,7 +171,8 @@ class _PlatoonSixDetailsPageState extends State<PlatoonSixDetailsPage> {
     if(await canLaunch(url)) {
       await launch(url);
     } else{
-      print("Can't Launch $url");
+      ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: new Text("The required App not installed")));
     }
   }
 
@@ -413,7 +412,6 @@ class _PlatoonSixDetailsPageState extends State<PlatoonSixDetailsPage> {
     _phone = platoonSixNotifier.currentPlatoonSix.phone;
     _twitter = platoonSixNotifier.currentPlatoonSix.twitter;
     _worstMoment = platoonSixNotifier.currentPlatoonSix.worstMoment;
-    _nyscBatch = platoonSixNotifier.currentPlatoonSix.nyscBatch;
     _occupation = platoonSixNotifier.currentPlatoonSix.occupation;
     _favPlaceInCamp = platoonSixNotifier.currentPlatoonSix.favPlaceInCamp;
     _favCampActivity = platoonSixNotifier.currentPlatoonSix.favCampActivity;
@@ -688,7 +686,7 @@ class _PlatoonSixDetailsPageState extends State<PlatoonSixDetailsPage> {
                       elevation: 2,
                       color: buttonColor,
                       icon: new Icon(
-                        MdiIcons.twitterCircle,
+                        MdiIcons.twitter,
                         color: iconTextColorTwo,
                       ),
                       label: Text(twitterButton,
@@ -721,7 +719,7 @@ class _PlatoonSixDetailsPageState extends State<PlatoonSixDetailsPage> {
                         elevation: 2,
                         color: buttonColor,
                         icon: new Icon(
-                          MdiIcons.twitterCircle,
+                          MdiIcons.twitter,
                           color: iconTextColorTwo,
                         ),
                         label: Text(twitterButton,
@@ -1067,7 +1065,7 @@ class _PlatoonSixDetailsPageState extends State<PlatoonSixDetailsPage> {
                       elevation: 2,
                       color: buttonColor,
                       icon: new Icon(
-                        MdiIcons.linkedinBox,
+                        MdiIcons.linkedin,
                         color: iconTextColorTwo,
                       ),
                       label: Text(
@@ -1098,7 +1096,7 @@ class _PlatoonSixDetailsPageState extends State<PlatoonSixDetailsPage> {
                         elevation: 2,
                         color: buttonColor,
                         icon: new Icon(
-                          MdiIcons.linkedinBox,
+                          MdiIcons.linkedin,
                           color: iconTextColorTwo,
                         ),
                         label: Text(
@@ -2514,92 +2512,6 @@ class _PlatoonSixDetailsPageState extends State<PlatoonSixDetailsPage> {
 //              ),
 //            ),
 //          ),
-          (() {
-            if (_nyscBatch.toString().isNotEmpty) {
-              return Padding(
-                padding: const EdgeInsets.only(top: 20.0),
-                child: Container(
-                  child: Material(
-                    color: materialBackgroundColor,
-                    child: InkWell(
-                      splashColor: splashColor,
-                      onTap: () {},
-                      child: Padding(
-                        padding:
-                        const EdgeInsets.only(bottom: 15, top: 15, left: 25),
-                        child: Text.rich(
-                          TextSpan(
-                            children: <TextSpan>[
-                              TextSpan(
-                                  text: nyscBatchTitle,
-                                  style: GoogleFonts.aBeeZee(
-                                    color: textColor,
-                                    fontSize: 19,
-                                    fontWeight: FontWeight.bold,
-                                  )),
-                              TextSpan(
-                                  text: ' ' + _nyscBatch,
-                                  style: GoogleFonts.trykker(
-                                    color: textColor,
-                                    fontSize: 19,
-                                    fontWeight: FontWeight.w300,
-                                  )),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  decoration: BoxDecoration(
-                      color: shapeDecorationColor.withAlpha(50),
-                      borderRadius: new BorderRadius.circular(10)),
-                ),
-              );
-            } else {
-              return Visibility(
-                  visible: !_isVisible,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
-                    child: Container(
-                      child: Material(
-                        color: materialBackgroundColor,
-                        child: InkWell(
-                          splashColor: splashColor,
-                          onTap: () {},
-                          child: Padding(
-                            padding:
-                            const EdgeInsets.only(bottom: 15, top: 15, left: 25),
-                            child: Text.rich(
-                              TextSpan(
-                                children: <TextSpan>[
-                                  TextSpan(
-                                      text: nyscBatchTitle,
-                                      style: GoogleFonts.aBeeZee(
-                                        color: textColor,
-                                        fontSize: 19,
-                                        fontWeight: FontWeight.bold,
-                                      )),
-                                  TextSpan(
-                                      text: ' ' + _nyscBatch,
-                                      style: GoogleFonts.trykker(
-                                        color: textColor,
-                                        fontSize: 19,
-                                        fontWeight: FontWeight.w300,
-                                      )),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      decoration: BoxDecoration(
-                          color: shapeDecorationColor.withAlpha(50),
-                          borderRadius: new BorderRadius.circular(10)),
-                    ),
-                  )
-              );
-            }
-          }()),
 
           (() {
             if (_occupation.toString().isNotEmpty) {
