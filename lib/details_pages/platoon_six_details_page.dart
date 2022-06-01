@@ -81,22 +81,22 @@ String facebookProfileSharedPreferencesButton = "Go to Facebook";
 String facebookProfileSharedPreferencesButtonTwo = "Lol, No";
 
 
-Color backgroundColor = Color.fromRGBO(189, 170, 176, 1);
+Color backgroundColor = Color.fromRGBO(136, 111, 111, 1);
 Color appBarTextColor = Colors.white;
-Color appBarBackgroundColor = Color.fromRGBO(189, 150, 176, 1);
+  Color appBarBackgroundColor = Color.fromRGBO(136, 111, 111, 1);
 Color appBarIconColor = Colors.white;
 Color materialBackgroundColor = Colors.transparent;
-Color shapeDecorationColor = Color.fromRGBO(189, 150, 176, 1);
-Color shapeDecorationTextColor = Color.fromRGBO(189, 150, 176, 1);
+Color shapeDecorationColor = Color.fromRGBO(136, 111, 111, 1);
+Color shapeDecorationTextColor = Color.fromRGBO(136, 111, 111, 1);
 Color cardBackgroundColor = Colors.white;
 Color cardThumbColor = Colors.white;
-Color cardThumbBackgroundColor = Color.fromRGBO(189, 150, 176, 1);
-Color splashColor = Color.fromRGBO(189, 150, 176, 1);
+Color cardThumbBackgroundColor = Color.fromRGBO(136, 111, 111, 1);
+Color splashColor = Color.fromRGBO(136, 111, 111, 1);
 Color splashColorTwo = Colors.white;
-Color iconTextColor = Color.fromRGBO(189, 150, 176, 1);
+Color iconTextColor = Color.fromRGBO(136, 111, 111, 1);
 Color iconTextColorTwo = Colors.white;
-Color buttonColor = Color.fromRGBO(189, 150, 176, 1);
-Color textColor = Color.fromRGBO(189, 150, 176, 1);
+Color buttonColor = Color.fromRGBO(136, 111, 111, 1);
+Color textColor = Color.fromRGBO(136, 111, 111, 1);
 Color confettiColorOne = Colors.green;
 Color confettiColorTwo = Colors.blue;
 Color confettiColorThree = Colors.pink;
@@ -1742,7 +1742,7 @@ class _PlatoonSixDetailsPageState extends State<PlatoonSixDetailsPage> {
                           TextSpan(
                             children: <TextSpan>[
                               TextSpan(
-                                  text: ppaNameTitle,
+                                  text: whatsNextAfterTitle,
                                   style:  GoogleFonts.aBeeZee(
                                     color: textColor,
                                     fontSize: 19,
@@ -1787,7 +1787,7 @@ class _PlatoonSixDetailsPageState extends State<PlatoonSixDetailsPage> {
                               TextSpan(
                                 children: <TextSpan>[
                                   TextSpan(
-                                      text: ppaNameTitle,
+                                      text: whatsNextAfterTitle,
                                       style:  GoogleFonts.aBeeZee(
                                         color: textColor,
                                         fontSize: 19,

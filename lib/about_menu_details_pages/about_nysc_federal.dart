@@ -103,26 +103,26 @@ double staffPopulation = 4054;
 
 
 
-Color backgroundColor = Color.fromRGBO(25, 59, 111, 1);
-Color appBarBackgroundColor = Color.fromRGBO(25, 49, 111, 1);
-Color appBarIconColor = Colors.blueGrey;
-Color appBarBackgroundTextColor = Colors.blueGrey;
-Color cardBackgroundColor = Color.fromRGBO(25, 49, 111, 1);
-Color textColor = Color.fromRGBO(25, 49, 111, 1);
-Color cardTextColor = Colors.blueGrey;
+Color backgroundColor = Color.fromRGBO(16, 86, 82, 1.0);
+Color appBarBackgroundColor = Color.fromRGBO(16, 86, 82, 1.0).withAlpha(110);
+Color appBarIconColor = Colors.white70;
+Color appBarBackgroundTextColor = Colors.white70;
+Color cardBackgroundColor = Color.fromRGBO(16, 86, 82, 1.0).withAlpha(110);
+Color textColor =  Colors.white70;
+Color cardTextColor = Colors.white70;
 Color materialColor = Colors.transparent;
 Color materialInkWellColor = Colors.blue.withAlpha(80);
 Color materialTextColor = Colors.blueGrey;
 Color containerColor = Colors.blueGrey.withAlpha(50);
 Color containerTextColor = Colors.white.withAlpha(110);
-Color containerColor2 = Colors.blueGrey;
+Color containerColor2 = Color.fromRGBO(38, 126, 121, 1.0);
 Color chartBackgroundColor = Colors.grey[200];
-Color chartTextColor = Color.fromRGBO(25, 49, 111, 1);
-Color chartTextColorTwo = Color.fromRGBO(25, 49, 111, 1);
+Color chartTextColor = Color.fromRGBO(16, 86, 82, 1.0);
+Color chartTextColorTwo = Color.fromRGBO(16, 86, 82, 1.0);
 Color firstFederalNYSCChartColor = Colors.white.withAlpha(110);
-Color secondFederalNYSCChartColor = Color.fromRGBO(25, 49, 111, 1);
-Color thirdFederalNYSCChartColor = Colors.lightBlue;
-Color firstFederalNYSCCorpMemberChartColor = Color.fromRGBO(25, 49, 111, 1);
+Color secondFederalNYSCChartColor = Color.fromRGBO(16, 86, 82, 1.0);
+Color thirdFederalNYSCChartColor = Colors.white;
+Color firstFederalNYSCCorpMemberChartColor = Color.fromRGBO(38, 126, 121, 1.0);
 Color secondFederalNYSCCorpMemberChartColor = Color.fromRGBO(184, 186, 181, 1);
 
 class AboutNYSCFederalState extends StatefulWidget {
@@ -1173,6 +1173,7 @@ class _AboutNYSCFederalState extends State<AboutNYSCFederalState> {
             Container(
               height: 340,
               child: Swiper(
+                autoplay: true,
                 viewportFraction: 0.8,
                 scale: 0.9,
                 itemCount: federalArialNotifier.federalArialList.length,
@@ -1259,6 +1260,7 @@ class _AboutNYSCFederalState extends State<AboutNYSCFederalState> {
             Container(
               height: 340,
               child: Swiper(
+                autoplay: true,
                 viewportFraction: 0.8,
                 scale: 0.9,
                 itemCount: federalAchievementsNotifier.federalAchievementsList.length,
@@ -1376,7 +1378,7 @@ List<Color> federalNYSCColorList = [
 ];
 
 List<Color> federalNYSCCorpMemberColorList = [
-  secondFederalNYSCCorpMemberChartColor.withAlpha(160),
+  firstFederalNYSCCorpMemberChartColor.withAlpha(160),
   secondFederalNYSCCorpMemberChartColor,
 ];
 

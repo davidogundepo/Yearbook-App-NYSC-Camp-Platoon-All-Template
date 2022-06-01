@@ -40,24 +40,24 @@ String exitAppYes = "I Have To";
 String imgAsset = "assets/images/fin_inc_17.jpg";
 
 
-Color gradientColor = Color.fromRGBO(162, 78, 124, 1);
-Color gradientColorTwo = Color.fromRGBO(162, 92, 124, 1);
-Color linearGradientColor = Color.fromRGBO(162, 92, 124, 1);
-Color linearGradientColorTwo = Color.fromRGBO(162, 92, 124, 1);
-Color boxShadowColor = Color.fromRGBO(162, 92, 124, 1);
+Color gradientColor = Color.fromRGBO(58, 56, 69, 1);
+Color gradientColorTwo = Color.fromRGBO(58, 56, 69, 1);
+Color linearGradientColor = Color.fromRGBO(58, 56, 69, 1);
+Color linearGradientColorTwo = Color.fromRGBO(58, 56, 69, 1);
+Color boxShadowColor = Color.fromRGBO(58, 56, 69, 1);
 Color dividerColor = Colors.white;
 Color materialBackgroundColor = Colors.transparent;
 Color shimmerBaseColor = Colors.white;
-Color shimmerHighlightColor = Color.fromRGBO(162, 30, 124, 1);
+Color shimmerHighlightColor = Color.fromRGBO(58, 56, 69, 1);
 Color shapeDecorationTextColor = Colors.white;
-Color shapeDecorationTextColorTwo = Color.fromRGBO(162, 30, 124, 1);
-Color containerBackgroundColor = Color.fromRGBO(162, 30, 124, 1);
-Color containerBackgroundColorTwo = Color.fromRGBO(162, 78, 124, 1);
+Color shapeDecorationTextColorTwo = Color.fromRGBO(175, 174, 181, 1.0);
+Color containerBackgroundColor = Color.fromRGBO(183, 181, 190, 1.0);
+Color containerBackgroundColorTwo = Color.fromRGBO(58, 56, 69, 1);
 Color containerIconColor = Colors.white70;
-Color dialogBackgroundColor = Color.fromRGBO(162, 78, 124, 1);
+Color dialogBackgroundColor = Color.fromRGBO(58, 56, 69, 1);
 Color dialogTextColor = Colors.white;
-Color splashColor = Color.fromRGBO(162, 92, 124, 1);
-Color splashColorTwo = Color.fromRGBO(162, 30, 124, 1);
+Color splashColor = Color.fromRGBO(58, 56, 69, 1);
+Color splashColorTwo = Color.fromRGBO(58, 56, 69, 1);
 
 
 class SideBar extends StatefulWidget {

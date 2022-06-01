@@ -63,17 +63,18 @@ flutter_native_splash:
   ios_content_mode: scaleAspectFill
 
 dev_dependencies:
-  flutter_native_splash: ^1.2.3
+  flutter_native_splash: ^2.1.0
   flutter_test:
     sdk: flutter
 
-flutter_launcher_name:
-  name: "NYSC Camp All Platoon ALMANAC Template"
+flutter_app_name:
+#  name: "NYSC Camp All Platoon ALMANAC Template"
+  name: "NG CAMP 10"
 
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/images/nysc.jpg"
+  image_path: "assets/images/nysc_icon_3.png"
 
 #dependency_overrides:
 #  firebase_core: 0.5.3

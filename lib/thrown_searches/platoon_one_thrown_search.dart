@@ -8,21 +8,22 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:provider/provider.dart';
 
 
-Color backgroundColor = Color.fromRGBO(189, 170, 176, 1);
-Color appBarTextColor = Colors.white;
-Color appBarBackgroundColor = Color.fromRGBO(189, 150, 176, 1);
-Color appBarIconColor = Colors.white;
-Color modalColor = Color.fromRGBO(189, 150, 176, 1);
+Color backgroundColor = Color.fromRGBO(162, 210, 255, 1);
+Color appBarTextColor = Color.fromRGBO(72, 117, 159, 1.0);
+Color appBarBackgroundColor = Color.fromRGBO(162, 210, 255, 1);
+Color appBarIconColor = Color.fromRGBO(72, 117, 159, 1.0);
+Color modalColor = Color.fromRGBO(162, 210, 255, 1);
 Color modalBackgroundColor = Colors.transparent;
 Color materialBackgroundColor = Colors.transparent;
-Color cardBackgroundColor = Colors.white;
-Color splashColor = Color.fromRGBO(189, 150, 176, 1);
-Color iconColor = Colors.white;
-Color textColor = Colors.white;
-Color textColorTwo = Colors.white70;
-Color dialogBackgroundColor = Color.fromRGBO(189, 170, 176, 1);
+Color cardBackgroundColor = Color.fromRGBO(72, 117, 159, 1.0);
+Color splashColor = Color.fromRGBO(162, 210, 255, 1);
+Color iconColor = Color.fromRGBO(37, 70, 103, 1.0);
+Color textColor = Color.fromRGBO(37, 70, 103, 1.0);
+Color textColorTwo = Color.fromRGBO(72, 117, 159, 1.0);
+Color dialogBackgroundColor = Color.fromRGBO(162, 210, 255, 1);
 Color borderColor = Colors.black;
-Color textHighlightColor = Colors.white;
+Color textHighlightColor = Color.fromRGBO(37, 70, 103, 1.0);
+
 
 var queryTech;
 

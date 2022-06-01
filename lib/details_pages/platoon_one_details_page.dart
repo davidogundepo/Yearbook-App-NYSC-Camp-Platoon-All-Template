@@ -81,22 +81,22 @@ String facebookProfileSharedPreferencesButton = "Go to Facebook";
 String facebookProfileSharedPreferencesButtonTwo = "Lol, No";
 
 
-Color backgroundColor = Color.fromRGBO(189, 170, 176, 1);
-Color appBarTextColor = Colors.white;
-Color appBarBackgroundColor = Color.fromRGBO(189, 150, 176, 1);
-Color appBarIconColor = Colors.white;
+Color backgroundColor = Color.fromRGBO(162, 210, 255, 1);
+Color appBarTextColor = Color.fromRGBO(72, 117, 159, 1.0);
+Color appBarBackgroundColor = Color.fromRGBO(162, 210, 255, 1);
+Color appBarIconColor = Color.fromRGBO(72, 117, 159, 1.0);
 Color materialBackgroundColor = Colors.transparent;
-Color shapeDecorationColor = Color.fromRGBO(189, 150, 176, 1);
-Color shapeDecorationTextColor = Color.fromRGBO(189, 150, 176, 1);
-Color cardBackgroundColor = Colors.white;
-Color cardThumbColor = Colors.white;
-Color cardThumbBackgroundColor = Color.fromRGBO(189, 150, 176, 1);
-Color splashColor = Color.fromRGBO(189, 150, 176, 1);
-Color splashColorTwo = Colors.white;
-Color iconTextColor = Color.fromRGBO(189, 150, 176, 1);
-Color iconTextColorTwo = Colors.white;
-Color buttonColor = Color.fromRGBO(189, 150, 176, 1);
-Color textColor = Color.fromRGBO(189, 150, 176, 1);
+Color shapeDecorationColor = Color.fromRGBO(72, 117, 159, 1.0);
+Color shapeDecorationTextColor = Color.fromRGBO(72, 117, 159, 1.0);
+Color cardBackgroundColor = Color.fromRGBO(135, 181, 222, 1.0);
+Color cardThumbColor = Color.fromRGBO(162, 210, 255, 1);
+Color cardThumbBackgroundColor = Color.fromRGBO(83, 128, 169, 1.0);
+Color splashColor = Color.fromRGBO(162, 210, 255, 1);
+Color splashColorTwo = Color.fromRGBO(72, 117, 159, 1.0);
+Color iconTextColor = Color.fromRGBO(72, 117, 159, 1.0);
+Color iconTextColorTwo = Color.fromRGBO(162, 210, 255, 1);
+Color buttonColor = Color.fromRGBO(72, 117, 159, 1.0);
+Color textColor = Color.fromRGBO(37, 70, 103, 1.0);
 Color confettiColorOne = Colors.green;
 Color confettiColorTwo = Colors.blue;
 Color confettiColorThree = Colors.pink;
@@ -1742,7 +1742,7 @@ class _PlatoonOneDetailsPageState extends State<PlatoonOneDetailsPage> {
                           TextSpan(
                             children: <TextSpan>[
                               TextSpan(
-                                  text: ppaNameTitle,
+                                  text: whatsNextAfterTitle,
                                   style:  GoogleFonts.aBeeZee(
                                     color: textColor,
                                     fontSize: 19,
@@ -1787,7 +1787,7 @@ class _PlatoonOneDetailsPageState extends State<PlatoonOneDetailsPage> {
                               TextSpan(
                                 children: <TextSpan>[
                                   TextSpan(
-                                      text: ppaNameTitle,
+                                      text: whatsNextAfterTitle,
                                       style:  GoogleFonts.aBeeZee(
                                         color: textColor,
                                         fontSize: 19,
@@ -3140,14 +3140,14 @@ class _PlatoonOneDetailsPageState extends State<PlatoonOneDetailsPage> {
         title: Text(
           facebookProfileSharedPreferencesTitle,
           style: TextStyle(
-              color: cardBackgroundColor
+              color: textColor
           ),
         ),
         content: Text(
           facebookProfileSharedPreferencesContentOne + _facebook + facebookProfileSharedPreferencesContentTwo,
           textAlign: TextAlign.justify,
           style: TextStyle(
-              color: cardBackgroundColor
+              color: textColor
           ),
         ),
         actions: <Widget>[
@@ -3158,14 +3158,14 @@ class _PlatoonOneDetailsPageState extends State<PlatoonOneDetailsPage> {
                   context, duration:
                   Toast.LENGTH_LONG,
                   gravity:  Toast.BOTTOM,
-                  textColor: cardBackgroundColor,
+                  textColor: textColor,
                   backgroundColor: backgroundColor,
                   backgroundRadius: 10
               );
             },
             child: Text(facebookProfileSharedPreferencesButton,
               style: TextStyle(
-                  color: cardBackgroundColor
+                  color: textColor
               ),
             ),
           ),
@@ -3173,7 +3173,7 @@ class _PlatoonOneDetailsPageState extends State<PlatoonOneDetailsPage> {
             onPressed: () => Navigator.of(context).pop(false),
             child: Text(facebookProfileSharedPreferencesButtonTwo,
               style: TextStyle(
-                  color: cardBackgroundColor
+                  color: textColor
               ),
             ),
           ),
@@ -3197,14 +3197,14 @@ class _PlatoonOneDetailsPageState extends State<PlatoonOneDetailsPage> {
         title: Text(
           linkedInProfileSharedPreferencesTitle,
           style: TextStyle(
-              color: cardBackgroundColor
+              color: textColor
           ),
         ),
         content: Text(
           linkedInProfileSharedPreferencesContentOne + _linkedIn + linkedInProfileSharedPreferencesContentTwo,
           textAlign: TextAlign.justify,
           style: TextStyle(
-              color: cardBackgroundColor
+              color: textColor
           ),
         ),
         actions: <Widget>[
@@ -3215,14 +3215,14 @@ class _PlatoonOneDetailsPageState extends State<PlatoonOneDetailsPage> {
                   context, duration:
                   Toast.LENGTH_LONG,
                   gravity:  Toast.BOTTOM,
-                  textColor: cardBackgroundColor,
+                  textColor: textColor,
                   backgroundColor: backgroundColor,
                   backgroundRadius: 10
               );
             },
             child: Text(linkedInProfileSharedPreferencesButton,
               style: TextStyle(
-                  color: cardBackgroundColor
+                  color: textColor
               ),
             ),
           ),
@@ -3230,7 +3230,7 @@ class _PlatoonOneDetailsPageState extends State<PlatoonOneDetailsPage> {
             onPressed: () => Navigator.of(context).pop(false),
             child: Text(linkedInProfileSharedPreferencesButtonTwo,
               style: TextStyle(
-                  color: cardBackgroundColor
+                  color: textColor
               ),
             ),
           ),

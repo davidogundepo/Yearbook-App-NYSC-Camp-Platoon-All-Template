@@ -32,7 +32,7 @@ String campStaffBodyStatement = "We currently have 42 staff members in $campName
 String campCorpersPopulationChart = "$campName Corp Members Population Chart";
 String campStaffPopulationChart = "$campName Staff Members Population Chart";
 
-String nyscCampArial = "Some of our campArial";
+String nyscCampArial = "Some of our Camp Arial Views";
 String nyscCampArialSwipe = "Swipe left or right for more photos";
 
 double maleCampCorperPopulation = 31;
@@ -41,24 +41,24 @@ double femaleCampCorperPopulation = 22;
 double campStaffPopulation = 42;
 
 
-Color backgroundColor = Colors.blueGrey[900];
-Color appBarBackgroundColor = Colors.blueGrey[800];
-Color appBarIconColor = Colors.blueGrey;
-Color appBarBackgroundTextColor = Colors.blueGrey;
-Color cardBackgroundColor = Colors.black38;
-Color cardTextColor = Colors.blueGrey;
+Color backgroundColor = Color.fromRGBO(176, 80, 67, 1.0);
+Color appBarBackgroundColor = Color.fromRGBO(176, 80, 67, 1.0);
+Color appBarIconColor = Colors.black54;
+Color appBarBackgroundTextColor = Colors.black54;
+Color cardBackgroundColor = Color.fromRGBO(188, 90, 78, 1.0);
+Color cardTextColor = Colors.black54;
 Color materialColor = Colors.transparent;
-Color materialInkWellColor = Colors.blueGrey;
-Color materialTextColor = Colors.blueGrey;
-Color containerColor = Colors.blueGrey.withAlpha(50);
-Color containerTextColor = Colors.blueGrey[900];
-Color containerColor2 = Colors.blueGrey;
+Color materialInkWellColor = Color.fromRGBO(176, 80, 67, 1.0);
+Color materialTextColor = Colors.black54;
+Color containerColor = Color.fromRGBO(217, 120, 108, 1.0).withAlpha(50);
+Color containerTextColor = Colors.black54;
+Color containerColor2 = Color.fromRGBO(200, 102, 89, 1.0);
 Color chartBackgroundColor = Colors.blueGrey[200];
-Color chartTextColor = Colors.blueGrey[900].withOpacity(0.9);
-Color firstCampCorperChartColor = Color.fromRGBO(145, 172, 179, 1).withAlpha(160);
-Color secondCampCorperChartColor = Color.fromRGBO(184, 186, 181, 1);
-Color firstCampBodyChartColor = Color.fromRGBO(145, 172, 179, 1).withAlpha(160);
-Color secondCampBodyChartColor = Color.fromRGBO(184, 186, 181, 1);
+Color chartTextColor = Colors.black54;
+Color firstCampCorperChartColor = Color.fromRGBO(176, 80, 67, 1.0);
+Color secondCampCorperChartColor = Color.fromRGBO(65, 108, 112, 1.0);
+Color firstCampBodyChartColor = Color.fromRGBO(41, 57, 79, 1.0);
+Color secondCampBodyChartColor = Color.fromRGBO(41, 79, 75, 1.0);
 Color thirdCampBodyChartColor = Color.fromRGBO(44, 99, 117, 1.0);
 
 class AboutCamp extends StatefulWidget {
@@ -623,6 +623,7 @@ class _AboutCamp extends State<AboutCamp> {
             Container(
               height: 340,
               child: Swiper(
+                autoplay: true,
                 viewportFraction: 0.8,
                 scale: 0.9,
                 itemCount: campArialNotifier.campArialList.length,
