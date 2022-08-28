@@ -242,7 +242,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                                 },
                                 child:Align(
                                   alignment: Alignment.centerLeft,
-                                  child: MenuItem(
+                                  child: MenuItems(
                                         icon: MdiIcons.accountGroup,
                                         title: platoonOneTitle,
                                       ),
@@ -260,7 +260,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                                 },
                                 child: Align(
                                   alignment: Alignment.centerLeft,
-                                  child: MenuItem(
+                                  child: MenuItems(
                                     icon: MdiIcons.accountGroup,
                                     title: platoonTwoTitle,
                                   ),
@@ -278,7 +278,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                                 },
                                 child: Align(
                                   alignment: Alignment.centerLeft,
-                                  child: MenuItem(
+                                  child: MenuItems(
                                     icon: MdiIcons.accountGroup,
                                     title: platoonThreeTitle,
                                   ),
@@ -296,7 +296,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                                 },
                                 child: Align(
                                   alignment: Alignment.centerLeft,
-                                  child: MenuItem(
+                                  child: MenuItems(
                                     icon: MdiIcons.accountGroup,
                                     title: platoonFourTitle,
                                   ),
@@ -314,7 +314,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                                 },
                                 child: Align(
                                   alignment: Alignment.centerLeft,
-                                  child: MenuItem(
+                                  child: MenuItems(
                                     icon: MdiIcons.accountGroup,
                                     title: platoonFiveTitle,
                                   ),
@@ -332,7 +332,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                                 },
                                 child: Align(
                                   alignment: Alignment.centerLeft,
-                                  child: MenuItem(
+                                  child: MenuItems(
                                     icon: MdiIcons.accountGroup,
                                     title: platoonSixTitle,
                                   ),
@@ -350,7 +350,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                                 },
                                 child: Align(
                                   alignment: Alignment.centerLeft,
-                                  child: MenuItem(
+                                  child: MenuItems(
                                     icon: MdiIcons.accountGroup,
                                     title: platoonSevenTitle,
                                   ),
@@ -368,7 +368,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                                 },
                                 child: Align(
                                   alignment: Alignment.centerLeft,
-                                  child: MenuItem(
+                                  child: MenuItems(
                                     icon: MdiIcons.accountGroup,
                                     title: platoonEightTitle,
                                   ),
@@ -386,7 +386,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                                 },
                                 child: Align(
                                   alignment: Alignment.centerLeft,
-                                  child: MenuItem(
+                                  child: MenuItems(
                                     icon: MdiIcons.accountGroup,
                                     title: platoonNineTitle,
                                   ),
@@ -404,7 +404,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                                 },
                                 child: Align(
                                   alignment: Alignment.centerLeft,
-                                  child: MenuItem(
+                                  child: MenuItems(
                                     icon: MdiIcons.accountGroup,
                                     title: platoonTenTitle,
                                   ),
@@ -422,8 +422,8 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                                 },
                                 child: Align(
                                   alignment: Alignment.centerLeft,
-                                  child: MenuItem(
-                                    icon: MdiIcons.teach,
+                                  child: MenuItems(
+                                    icon: MdiIcons.school,
                                     title: campCoordinatorsTitle,
                                   ),
                                 ),
@@ -440,7 +440,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                                 },
                                 child: Align(
                                   alignment: Alignment.centerLeft,
-                                  child: MenuItem(
+                                  child: MenuItems(
                                     icon: MdiIcons.pillar,
                                     title: campOfficialsTitle,
                                   ),
@@ -466,7 +466,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                                   },
                                   child: Align(
                                     alignment: Alignment.center,
-                                    child: MenuItem(
+                                    child: MenuItems(
                                       icon: MdiIcons.logout,
                                       title: exitAppStatement,
                                     ),

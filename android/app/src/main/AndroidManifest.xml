@@ -28,7 +28,7 @@
 
     <application
         android:name="${applicationName}"
-        android:label="NG CAMP 10"
+        android:label="NYSC Camp Platoons"
         android:icon="@mipmap/ic_launcher"
         android:extractNativeLibs="true"
         android:fullBackupContent="true"
