@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:398224111517:android:be1f06afaf5b07df052174",
         "android_client_info": {
-          "package_name": "com.example.nysc_camp_platoons_all"
+          "package_name": "com.icdatinnovations.nysc_camp_platoons_all"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "398224111517-8rlqtg302splecuh661k4mkb3iquldcf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.nysc_camp_platoons_all",
+            "package_name": "com.icdatinnovations.nysc_camp_platoons_all",
             "certificate_hash": "35a7de7f844c9b3817d4f98afe7048aeb8437cef"
           }
         },
